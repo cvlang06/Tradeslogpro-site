@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — TradesLog Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e14;
+    --surface: #16161f;
+    --surface2: #1e1e2a;
+    --purple: #7c5cbf;
+    --purple-light: #b39ddb;
+    --orange: #f5a623;
+    --white: #f0eeff;
+    --muted: #7a7a9a;
+    --border: rgba(124, 92, 191, 0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    background: rgba(14,14,20,0.88);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.35rem;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 34px; height: 34px;
+    background: linear-gradient(135deg, #5a3fa0, #7c5cbf);
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(124,92,191,0.4);
+  }
+
+  .nav-logo .pro { color: var(--purple-light); }
+
+  .nav-back {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-back:hover { color: var(--white); }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 8rem 2rem 6rem;
+  }
+
+  .page-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--purple-light);
+    margin-bottom: 0.8rem;
+  }
+
+  h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .last-updated {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    margin: 2.5rem 0 0.75rem;
+  }
+
+  h2::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: var(--purple);
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #c8c0e0;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+
+  ul {
+    margin: 0.5rem 0 1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  ul li {
+    font-size: 0.95rem;
+    color: #c8c0e0;
+    line-height: 1.7;
+  }
+
+  ul li::marker { color: var(--purple-light); }
+
+  .highlight-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--purple);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .highlight-box p { margin: 0; font-size: 0.9rem; }
+
+  .warning-box {
+    background: rgba(245,166,35,0.06);
+    border: 1px solid rgba(245,166,35,0.25);
+    border-left: 3px solid var(--orange);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .warning-box p { margin: 0; font-size: 0.9rem; }
+
+  a {
+    color: var(--purple-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a:hover { color: var(--white); }
+
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contact-card .label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .contact-card .value {
+    font-size: 0.95rem;
+    color: var(--white);
+  }
+
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .toc-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  .toc ol {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .toc ol li { font-size: 0.88rem; }
+  .toc ol li a { color: var(--purple-light); }
+  .toc ol li a:hover { color: var(--white); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+
+  .footer-brand span { color: var(--purple-light); }
+  .footer-links { display: flex; gap: 1.5rem; }
+
+  .footer-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--white); }
+  .footer-copy { color: var(--muted); font-size: 0.76rem; opacity: 0.55; }
+
+  @media (max-width: 600px) {
+    nav { padding: 1rem 1.25rem; }
+    .container { padding: 7rem 1.25rem 4rem; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-links { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="logo-icon">⏱</div>
+    TradesLog<span class="pro">&thinsp;Pro</span>
+  </a>
+  <a href="/" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="container">
+
+  <div class="page-label">Legal</div>
+  <h1>Terms of Service</h1>
+  <p class="last-updated">Last updated: May 29, 2026 &nbsp;·&nbsp; Effective: May 29, 2026</p>
+
+  <div class="highlight-box">
+    <p>By downloading, installing, or using TradesLog Pro, you agree to these Terms of Service. Please read them carefully. If you do not agree, do not use the app or website.</p>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#s1">Acceptance of Terms</a></li>
+      <li><a href="#s2">Who We Are</a></li>
+      <li><a href="#s3">The Service</a></li>
+      <li><a href="#s4">User Accounts & Responsibilities</a></li>
+      <li><a href="#s5">Subscriptions & Billing</a></li>
+      <li><a href="#s6">Free Tier & Limitations</a></li>
+      <li><a href="#s7">Your Data</a></li>
+      <li><a href="#s8">Intellectual Property</a></li>
+      <li><a href="#s9">Acceptable Use</a></li>
+      <li><a href="#s10">Disclaimers</a></li>
+      <li><a href="#s11">Limitation of Liability</a></li>
+      <li><a href="#s12">Indemnification</a></li>
+      <li><a href="#s13">Termination</a></li>
+      <li><a href="#s14">Governing Law</a></li>
+      <li><a href="#s15">Changes to These Terms</a></li>
+      <li><a href="#s16">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <h2 id="s1">1. Acceptance of Terms</h2>
+  <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "you") and CVLang Studios ("we", "us", "our") governing your use of the TradesLog Pro mobile application and website at tradeslogpro.com (collectively, the "Service").</p>
+  <p>By accessing or using the Service, you confirm that you are at least 18 years of age, have read and understood these Terms, and agree to be bound by them. If you are using the Service on behalf of a business, you represent that you have the authority to bind that business to these Terms.</p>
+
+  <h2 id="s2">2. Who We Are</h2>
+  <p>TradesLog Pro is developed and operated by CVLang Studios, based in Manitoba, Canada. Contact us at <a href="mailto:support@tradeslogpro.com">support@tradeslogpro.com</a>.</p>
+
+  <h2 id="s3">3. The Service</h2>
+  <p>TradesLog Pro is a mobile application designed to help tradespeople and self-employed contractors track working hours, manage job logs, generate invoices, log business expenses, and organize business tax records.</p>
+  <p>We reserve the right to modify, suspend, or discontinue any part of the Service at any time with reasonable notice. We will not be liable to you or any third party for any modification, suspension, or discontinuation of the Service.</p>
+
+  <h2 id="s4">4. User Accounts & Responsibilities</h2>
+  <p>TradesLog Pro does not currently require account registration. All data is stored locally on your device. You are solely responsible for:</p>
+  <ul>
+    <li>Maintaining the security of your device and the data stored on it</li>
+    <li>Creating regular backups of your data using the app's Backup & Restore feature</li>
+    <li>The accuracy of all information you enter into the app</li>
+    <li>Any actions taken using the app on your device</li>
+  </ul>
+
+  <div class="warning-box">
+    <p><strong style="color:var(--orange);">Data Loss Warning:</strong> Because your data is stored locally on your device, uninstalling the app without first creating a backup will result in permanent data loss. We strongly recommend regular backups. We are not responsible for any data loss resulting from device failure, app uninstallation, or failure to back up your data.</p>
+  </div>
+
+  <h2 id="s5">5. Subscriptions & Billing</h2>
+  <p>TradesLog Pro offers the following subscription options:</p>
+  <ul>
+    <li><strong style="color:var(--white)">Free Tier</strong> — available at no cost with feature limitations as described in the app</li>
+    <li><strong style="color:var(--white)">Pro Monthly</strong> — billed monthly at the current rate displayed in the app and on tradeslogpro.com</li>
+    <li><strong style="color:var(--white)">Pro Annual</strong> — billed annually at the current rate displayed in the app and on tradeslogpro.com</li>
+  </ul>
+  <p>All subscriptions are processed through the Apple App Store or Google Play Store, subject to their respective terms and billing policies. We do not directly handle payment card information.</p>
+  <p><strong style="color:var(--white)">Cancellation:</strong> You may cancel your subscription at any time through your App Store or Google Play account settings. Cancellation takes effect at the end of the current billing period. No partial refunds are provided for unused time within a billing period unless required by applicable law.</p>
+  <p><strong style="color:var(--white)">Refunds:</strong> Refund requests are handled by Apple or Google in accordance with their respective refund policies.</p>
+  <p><strong style="color:var(--white)">Price Changes:</strong> We reserve the right to change subscription prices. We will provide at least 30 days notice of any price increase via the app or email.</p>
+
+  <h2 id="s6">6. Free Tier & Limitations</h2>
+  <p>The free tier of TradesLog Pro includes full time entry and logbook functionality with a limit of 5 invoices per month and local storage only. We reserve the right to modify the features and limitations of the free tier at any time with reasonable notice.</p>
+
+  <h2 id="s7">7. Your Data</h2>
+  <p>You retain full ownership of all data you enter into TradesLog Pro. We do not claim any rights to your business data, client information, financial records, or any other content you create using the app.</p>
+  <p>All app data is stored locally on your device. You are responsible for the security and backup of your data. You may export your data at any time using the app's export features (CSV, PDF, or JSON backup).</p>
+  <p>For information about how we handle personal information, please see our <a href="/privacy.html">Privacy Policy</a>.</p>
+
+  <h2 id="s8">8. Intellectual Property</h2>
+  <p>TradesLog Pro, including its name, logo, design, code, features, and content, is owned by CVLang Studios and protected by Canadian and international intellectual property laws.</p>
+  <p>You are granted a limited, non-exclusive, non-transferable, revocable licence to use the app for your personal or business purposes in accordance with these Terms. You may not:</p>
+  <ul>
+    <li>Copy, modify, or distribute the app or any part of it</li>
+    <li>Reverse engineer, decompile, or disassemble the app</li>
+    <li>Use the TradesLog Pro name or logo without our written permission</li>
+    <li>Create derivative works based on the app</li>
+    <li>Use the app to build a competing product or service</li>
+  </ul>
+
+  <h2 id="s9">9. Acceptable Use</h2>
+  <p>You agree to use TradesLog Pro only for lawful purposes. You must not use the app to:</p>
+  <ul>
+    <li>Violate any applicable law or regulation</li>
+    <li>Fraudulently create or submit invoices or financial records</li>
+    <li>Interfere with or disrupt the Service or servers connected to it</li>
+    <li>Attempt to gain unauthorized access to any part of the Service</li>
+    <li>Transmit any malicious code or harmful content</li>
+  </ul>
+  <p>We reserve the right to terminate your access to the Service if you violate these acceptable use provisions.</p>
+
+  <h2 id="s10">10. Disclaimers</h2>
+  <p>TradesLog Pro is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to:</p>
+  <ul>
+    <li>Warranties of merchantability or fitness for a particular purpose</li>
+    <li>Warranties that the app will be uninterrupted, error-free, or secure</li>
+    <li>Warranties as to the accuracy or reliability of any information obtained through the app</li>
+  </ul>
+
+  <div class="warning-box">
+    <p><strong style="color:var(--orange);">Financial & Tax Disclaimer:</strong> TradesLog Pro is a productivity and record-keeping tool. It is not a substitute for professional financial, accounting, or tax advice. The financial calculations and reports generated by the app are for your personal tracking purposes only. Always consult a qualified accountant or tax professional for advice specific to your situation.</p>
+  </div>
+
+  <h2 id="s11">11. Limitation of Liability</h2>
+  <p>To the maximum extent permitted by applicable law, CVLang Studios shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+  <ul>
+    <li>Loss of data or profits</li>
+    <li>Business interruption</li>
+    <li>Loss of revenue resulting from errors in the app's calculations</li>
+    <li>Data loss resulting from device failure or failure to back up</li>
+    <li>Any damages arising from your reliance on the app for financial or tax purposes</li>
+  </ul>
+  <p>Our total liability to you for any claims arising under these Terms shall not exceed the amount you paid us in the 12 months preceding the claim, or CAD $100, whichever is greater.</p>
+
+  <h2 id="s12">12. Indemnification</h2>
+  <p>You agree to indemnify and hold harmless CVLang Studios and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, costs, and expenses (including legal fees) arising out of or related to your use of the Service, your violation of these Terms, or your violation of any rights of a third party.</p>
+
+  <h2 id="s13">13. Termination</h2>
+  <p>You may stop using TradesLog Pro at any time by uninstalling the app. We recommend exporting a backup of your data before uninstalling.</p>
+  <p>We reserve the right to suspend or terminate your access to the Service at our discretion, with or without notice, if we believe you have violated these Terms or if required by law.</p>
+  <p>Upon termination of a paid subscription, your access to Pro features will continue until the end of the current billing period. Your locally stored data remains on your device and is not affected by subscription termination.</p>
+
+  <h2 id="s14">14. Governing Law</h2>
+  <p>These Terms are governed by and construed in accordance with the laws of the Province of Manitoba and the federal laws of Canada applicable therein, without regard to conflict of law principles.</p>
+  <p>Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in Manitoba, Canada. If you are a consumer in a jurisdiction that does not permit this choice of law, the mandatory consumer protection laws of your jurisdiction will apply.</p>
+
+  <h2 id="s15">15. Changes to These Terms</h2>
+  <p>We may update these Terms from time to time. When we do, we will update the "Last updated" date at the top of this page. For material changes, we will provide notice via the app or by email. Your continued use of the Service after any changes constitutes acceptance of the updated Terms.</p>
+  <p>If you do not agree to the updated Terms, you should stop using the Service and may cancel any active subscription.</p>
+
+  <h2 id="s16">16. Contact Us</h2>
+  <p>If you have any questions about these Terms, please contact us:</p>
+
+  <div class="contact-card">
+    <div>
+      <div class="label">Company</div>
+      <div class="value">CVLang Studios</div>
+    </div>
+    <div>
+      <div class="label">Email</div>
+      <div class="value"><a href="mailto:support@tradeslogpro.com">support@tradeslogpro.com</a></div>
+    </div>
+    <div>
+      <div class="label">Website</div>
+      <div class="value"><a href="https://www.tradeslogpro.com">www.tradeslogpro.com</a></div>
+    </div>
+    <div>
+      <div class="label">Location</div>
+      <div class="value">Manitoba, Canada</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">TradesLog<span> Pro</span></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="mailto:support@tradeslogpro.com">Support</a>
+  </div>
+  <div class="footer-copy">© 2026 CVLang Studios. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
