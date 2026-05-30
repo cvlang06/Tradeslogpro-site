@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — TradesLog Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e14;
+    --surface: #16161f;
+    --surface2: #1e1e2a;
+    --purple: #7c5cbf;
+    --purple-light: #b39ddb;
+    --orange: #f5a623;
+    --white: #f0eeff;
+    --muted: #7a7a9a;
+    --border: rgba(124, 92, 191, 0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    background: rgba(14,14,20,0.88);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.35rem;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 34px; height: 34px;
+    background: linear-gradient(135deg, #5a3fa0, #7c5cbf);
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(124,92,191,0.4);
+  }
+
+  .nav-logo .pro { color: var(--purple-light); }
+
+  .nav-back {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-back:hover { color: var(--white); }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 8rem 2rem 6rem;
+  }
+
+  .page-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--purple-light);
+    margin-bottom: 0.8rem;
+  }
+
+  h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .last-updated {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    margin: 2.5rem 0 0.75rem;
+  }
+
+  h2::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: var(--purple);
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #c8c0e0;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+
+  ul {
+    margin: 0.5rem 0 1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  ul li {
+    font-size: 0.95rem;
+    color: #c8c0e0;
+    line-height: 1.7;
+  }
+
+  ul li::marker { color: var(--purple-light); }
+
+  .highlight-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--purple);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .highlight-box p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  a {
+    color: var(--purple-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a:hover { color: var(--white); }
+
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-card .label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .contact-card .value {
+    font-size: 0.95rem;
+    color: var(--white);
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+
+  .footer-brand span { color: var(--purple-light); }
+
+  .footer-links { display: flex; gap: 1.5rem; }
+
+  .footer-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--white); }
+  .footer-copy { color: var(--muted); font-size: 0.76rem; opacity: 0.55; }
+
+  @media (max-width: 600px) {
+    nav { padding: 1rem 1.25rem; }
+    .container { padding: 7rem 1.25rem 4rem; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-links { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="logo-icon">⏱</div>
+    TradesLog<span class="pro">&thinsp;Pro</span>
+  </a>
+  <a href="/" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="container">
+
+  <div class="page-label">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="last-updated">Last updated: May 29, 2026 &nbsp;·&nbsp; Effective: May 29, 2026</p>
+
+  <div class="highlight-box">
+    <p>Your privacy matters. TradesLog Pro is built on a simple principle — <strong style="color:var(--white)">your data belongs to you.</strong> All information you enter into the app is stored locally on your device. We do not collect, transmit, or sell your personal data to any third party.</p>
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>TradesLog Pro is developed and operated by CVLang Studios, based in Manitoba, Canada. If you have any questions about this Privacy Policy, you can contact us at <a href="mailto:support@tradeslogpro.com">support@tradeslogpro.com</a>.</p>
+
+  <h2>2. Information We Collect</h2>
+  <p>TradesLog Pro collects only the information you voluntarily enter into the app. This may include:</p>
+  <ul>
+    <li><strong style="color:var(--white)">Business information</strong> — your business name, address, phone number, email address, and GST/tax number</li>
+    <li><strong style="color:var(--white)">Client information</strong> — client names, company names, contact details, and addresses</li>
+    <li><strong style="color:var(--white)">Time and job data</strong> — shift times, job names, tasks, phases, notes, and hours worked</li>
+    <li><strong style="color:var(--white)">Financial data</strong> — hourly rates, earnings, invoices, and payment records</li>
+    <li><strong style="color:var(--white)">Expense data</strong> — expense amounts, categories, descriptions, and dates</li>
+    <li><strong style="color:var(--white)">Receipt photos</strong> — images captured via your device camera or gallery for expense tracking</li>
+    <li><strong style="color:var(--white)">Note photos</strong> — images attached to job log entries</li>
+    <li><strong style="color:var(--white)">Van load-out data</strong> — tool inventory, job type profiles, and daily load-out records</li>
+    <li><strong style="color:var(--white)">App preferences</strong> — your settings, pay period configuration, and display preferences</li>
+  </ul>
+  <p>If you sign up on our website at tradeslogpro.com, we also collect your <strong style="color:var(--white)">email address</strong> for the purpose of notifying you when the app launches.</p>
+
+  <h2>3. How Your Data Is Stored</h2>
+  <p>All data you enter into the TradesLog Pro app is stored <strong style="color:var(--white)">locally on your device only</strong>. We do not operate servers that store your app data. Your information does not leave your device unless you choose to export it yourself (via CSV, PDF, or backup file).</p>
+  <p>Receipt and note photos are saved to your device's local storage (Pictures/TradesLog folder on Android). These are not uploaded or transmitted anywhere.</p>
+
+  <div class="highlight-box">
+    <p><strong style="color:var(--white)">Important:</strong> Because your data is stored locally, if you uninstall the app without creating a backup, your data will be permanently lost. We strongly recommend using the Backup & Restore feature regularly.</p>
+  </div>
+
+  <h2>4. Biometric Data</h2>
+  <p>TradesLog Pro offers an optional biometric lock feature (fingerprint or face recognition). This feature uses your device's built-in biometric authentication system. We do not access, collect, or store your biometric data at any point. All biometric processing is handled entirely by your device's operating system.</p>
+
+  <h2>5. How We Use Your Information</h2>
+  <p>The information you enter into the app is used solely to provide the features of TradesLog Pro, including:</p>
+  <ul>
+    <li>Tracking your working hours and calculating regular and overtime pay</li>
+    <li>Generating professional invoices for your clients</li>
+    <li>Logging and categorizing business expenses</li>
+    <li>Producing tax-ready reports and summaries</li>
+    <li>Managing your van tool inventory and daily load-outs</li>
+    <li>Providing earnings statistics and financial projections</li>
+  </ul>
+  <p>Your email address collected via the website is used only to notify you of the app launch. We will not send unsolicited marketing emails and will never sell your email to third parties.</p>
+
+  <h2>6. Third Party Services</h2>
+  <p>TradesLog Pro uses the following third party services within the app:</p>
+  <ul>
+    <li><strong style="color:var(--white)">Google ML Kit (Android)</strong> — used on-device for receipt OCR scanning. ML Kit processes images locally on your device and does not send image data to Google servers during this process.</li>
+    <li><strong style="color:var(--white)">Apple Vision Framework (iOS)</strong> — used on-device for receipt OCR scanning. All processing occurs locally on your device.</li>
+  </ul>
+  <p>Our website at tradeslogpro.com uses the following services:</p>
+  <ul>
+    <li><strong style="color:var(--white)">Cloudflare Web Analytics</strong> — privacy-first, cookieless analytics that tracks aggregate page view data. No personal data is collected. See <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Cloudflare's Privacy Policy</a>.</li>
+    <li><strong style="color:var(--white)">Formspree</strong> — used to process email signups on our website. See <a href="https://formspree.io/legal/privacy-policy" target="_blank">Formspree's Privacy Policy</a>.</li>
+  </ul>
+
+  <h2>7. Data Sharing</h2>
+  <p>We do not sell, trade, rent, or otherwise share your personal information with third parties. The only exceptions are:</p>
+  <ul>
+    <li>When required by law or a valid legal process</li>
+    <li>To protect the rights, property, or safety of TradesLog Pro, its users, or the public</li>
+    <li>With your explicit consent</li>
+  </ul>
+
+  <h2>8. Your Rights Under PIPEDA</h2>
+  <p>As a Canadian resident, you have rights under the Personal Information Protection and Electronic Documents Act (PIPEDA), including the right to:</p>
+  <ul>
+    <li>Know what personal information we hold about you</li>
+    <li>Access your personal information</li>
+    <li>Request correction of inaccurate information</li>
+    <li>Withdraw consent for the use of your personal information</li>
+    <li>Request deletion of your personal information</li>
+  </ul>
+  <p>Since all app data is stored locally on your device, you have full control over it at all times. To delete your app data, simply uninstall the app or use the data management options within the app. To request deletion of your email from our website mailing list, contact us at <a href="mailto:support@tradeslogpro.com">support@tradeslogpro.com</a>.</p>
+
+  <h2>9. International Users</h2>
+  <p>TradesLog Pro is designed for use in Canada, Australia, the United Kingdom, and the United States. If you are located in the European Economic Area, you have additional rights under the General Data Protection Regulation (GDPR). If you are located in California, you have additional rights under the California Consumer Privacy Act (CCPA). In all cases, our commitment is the same — your data stays on your device and is never sold.</p>
+
+  <h2>10. Children's Privacy</h2>
+  <p>TradesLog Pro is designed for use by adults in a professional capacity. We do not knowingly collect personal information from anyone under the age of 13. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+
+  <h2>11. Security</h2>
+  <p>Because your data is stored locally on your device, its security depends on your device's security measures. We recommend using your device's built-in screen lock and enabling TradesLog Pro's optional biometric lock feature for additional protection. For data you export (backups, CSVs, PDFs), we recommend storing these files securely.</p>
+
+  <h2>12. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. For significant changes, we will notify users via the app or by email if you have signed up on our website. Continued use of the app after changes constitutes your acceptance of the updated policy.</p>
+
+  <h2>13. Contact Us</h2>
+  <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+
+  <div class="contact-card">
+    <div>
+      <div class="label">Company</div>
+      <div class="value">CVLang Studios</div>
+    </div>
+    <div>
+      <div class="label">Email</div>
+      <div class="value"><a href="mailto:support@tradeslogpro.com">support@tradeslogpro.com</a></div>
+    </div>
+    <div>
+      <div class="label">Website</div>
+      <div class="value"><a href="https://www.tradeslogpro.com">www.tradeslogpro.com</a></div>
+    </div>
+    <div>
+      <div class="label">Location</div>
+      <div class="value">Manitoba, Canada</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-brand">TradesLog<span> Pro</span></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="mailto:support@tradeslogpro.com">Support</a>
+  </div>
+  <div class="footer-copy">© 2026 CVLang Studios. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
